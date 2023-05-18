@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUWON GIT</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <h1>Hello Git World!</h1>
     <h2>If you use Git, you can manage version control of source easily</h2>
     <h2>Commit: Frederick</h2>
+
+    <div id="app">{{ message }}</div>
+    <div id="app-2">
+      <span v-bind:title="message">
+        내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다!
+      </span>
+    </div>
+
+    <div id="app-3">
+      <p v-if="seen">이제 나를 볼 수 있어요</p>
+    </div>
+
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">{{ todo.text }}</li>
+      </ol>
+    </div>
+
+    <script src="./jsforVue.js"></script>
   </body>
 </html>
