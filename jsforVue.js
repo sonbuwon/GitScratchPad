@@ -25,3 +25,9 @@ var app4 = new Vue({
     todos: [{ text: "JS" }, { text: "Vue" }, { text: "do awesome something" }],
   },
 });
+
+Vue.component("todo-item", {
+  template: "<li>할일 항목 하나입니다.</li>",
+});
+
+var app5 = new Vue();
